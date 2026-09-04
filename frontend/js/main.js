@@ -1,10 +1,26 @@
+const products = document.querySelector('.products');
 const productsButton = document.querySelector('.products_button');
 const productsList = document.querySelector('.products_list');
 
-productsButton.addEventListener('click', () => {
-    productsList.classList.toggle('products_list_active');
+productsButton.addEventListener('mouseenter', () => {
+    productsList.classList.add('products_list_active');
+    productsButton.classList.add('products_button_active');
 
-    const isOpen = productsList.classList.contains('products_list_active');
+    productsButton.setAttribute('aria-expanded', true);
+});
 
-    productsButton.setAttribute('aria-expanded', isOpen);
+products.addEventListener('mouseleave', () => {
+    productsList.classList.remove('products_list_active');
+    productsButton.classList.remove('products_button_active');
+
+    productsButton.setAttribute('aria-expanded', false);
+});
+
+document.addEventListener('click', (event) => {
+    if (!products.contains(event.target)) {
+        productsList.classList.remove('products_list_active');
+        productsButton.classList.remove('products_button_active');
+
+        productsButton.setAttribute('aria-expanded', false);
+    }
 });
