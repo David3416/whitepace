@@ -19,6 +19,7 @@
     max-width: 1480px;
     padding: 16px 0;
     margin: 0 auto;
+
 }
 
 .header_wrapper {
@@ -163,5 +164,27 @@
 }
 
 .try-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--button-primary-hover);
+}
+
+.main {
+    width: 100%;
+}
+
+.hero-title-wrapper {
+    display: grid;
+    grid-template-columns: 46%, 54%;
+    align-items: center;
+    background-color: aquamarine;
+    height: 689px;
+    padding-bottom: 140px;
+}
+
+
+
+.hero-title {
+    width: 656px;
+    font-size: 64px;
+    color: var(--primary-color);
+    font-weight: 500;
 }
