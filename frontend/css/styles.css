@@ -1,5 +1,6 @@
 :root {
     --primary-color: #4F9CF9;
+    --secondary-color: #ffffff;
 }
 
 .header {
@@ -12,25 +13,23 @@
     max-width: 1480px;
     padding: 16px 0;
     margin: 0 auto;
-    /* background-color: brown; */
-}
+    }
 
 .header_wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: blueviolet; */
+    }
 
-}
-
-.headerMenuButtonwrapper {
+.header_menu_wrapper {
     display: flex;
-    /* width: 650px; */
-    /* height: 36px; */
-    background-color: bisque;
+    flex-wrap: wrap;
 }
-
+.header_items{
+    display: flex;
+    flex-wrap: wrap;
+}
 .products {
     position: relative;
     list-style: none;
@@ -47,10 +46,13 @@
 
 
 /* UL */
+.products_list_item:visited {
+    color: var(--primary-color);
+
+}
 
 .products_button {
     outline: none;
-    background-color: black;
     height: 60px;
     width: 140px;
     display: block;
@@ -65,48 +67,44 @@
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
     padding: 0;
-    color: white;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
+/* выпад меню не виден */
 .products_list {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
 }
-
-.products_button:hover {
-    background-color: #4898eb;
+/* выпад меню виден */
+.products:hover .products_list {
+    display: block;
 }
+
 
 .products:has(.products_list:hover) .products_button {
-    background-color: white;
+    background-color: var(--secondary-color);
     color: var(--primary-color);
-    border-bottom: 1px solid white;
-}
-
-.products_list_active {
-    display: block;
-    border: 1px solid var(--primary-color);
-    height: 180px;
-    width: 140px;
-    
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .products_list_item {
     height: 60px;
+    width: 140px;
     text-decoration: none;
     display: block;
     padding: 20px 35px 5px;
-    border-bottom: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-top: none;
 }
 
 .products_list>li:last-child>.products_list_item {
-    border-bottom: none;
+    border-bottom: 1px solid var(--primary-color);;
 }
 
 .products_list_item:hover {
-    color: white;
     background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
