@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #4F9CF9;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 92px;
+}
+
+.wrapper {
+    max-width: 1480px;
+    padding: 16px 0;
+    margin: 0 auto;
+    /* background-color: brown; */
+}
+
+.header_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blueviolet; */
+
+}
+
+.headerMenuButtonwrapper {
+    display: flex;
+    /* width: 650px; */
+    /* height: 36px; */
+    background-color: bisque;
+}
+
+.menu {
+    display: block;
+    background: #576472;
+    position: relative;
+    /* Дополнительные стили оформления меню */
+    text-transform: uppercase;
+    border-top-left-radius: 2px;
+    -moz-border-top-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    -moz-border-top-right-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+}
+.menu a {
+    display: inline-block;
+    padding: 1.5em;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: 0.33s;
+    text-transform: uppercase;
+}
+.menu a:hover {
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    transition: 0.33s;
+}
+.dropdownmenu {
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: 0.33s;
+    text-transform: uppercase;
+}
+.dropdownmenu:hover {
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+}
+.dropdownmenu:hover > div {
+    display: block;
+    margin-top: 0;
+    transition: 0.33s;
+}
+.dropdownmenu > div {
+    display: none;
+    position: absolute;
+    background: #384049;
+    width: 250px;
+    margin-top: -4.2em;
+    z-index: 999999;
+    transition: 0.33s;
+    margin-top: -250px;
+}
+.dropdownmenu div > a {
+    display: block;
+    transition: 0.33s;
+    font-size: 14px;
+}
+.dropdownmenu div > a:hover {
+    background: #323a42;
+}
+.dropsubmenu:hover > div.dropsubmenulist {
+    display: block;
+}
+.dropsubmenulist {
+    display: none;
+    position: absolute;
+    margin-left: 250px;
+    background: #384049;
+    width: 250px;
+    border-left: #576472 5px solid;
+}
