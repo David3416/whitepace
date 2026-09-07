@@ -1,4 +1,6 @@
 :root {
+    --color-black: #000000;
+
     --primary-color: #4F9CF9;
     --secondary-color: #ffffff;
 
@@ -7,6 +9,7 @@
 
     --button-primary: var(--primary-color);
     --button-primary-hover: #3069af;
+
 }
 
 .header {
@@ -17,7 +20,7 @@
 
 .wrapper {
     max-width: 1480px;
-    padding: 16px 0;
+    padding: 0px 16px;
     margin: 0 auto;
 
 }
@@ -171,20 +174,139 @@
     width: 100%;
 }
 
-.hero-title-wrapper {
+.hero {
+    padding-top: 140px;
+}
+
+.hero-wrapper {
     display: grid;
-    grid-template-columns: 46%, 54%;
-    align-items: center;
-    background-color: aquamarine;
+    grid-template-columns: 46% 54%;
+
+    grid-gap: 100px;
     height: 689px;
     padding-bottom: 140px;
 }
 
+.hero-title-wrapper {
+    max-width: 656px;
+    align-items: flex-start;
+    padding-right: 50px;
+}
 
 
 .hero-title {
-    width: 656px;
+    padding-top: 100px;
+    max-width: 656px;
     font-size: 64px;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 900;
+    padding-bottom: 24px;
+
 }
+
+.hero-subtitle {
+    padding-bottom: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 30px;
+}
+
+.hero-foto-wrapper {
+    overflow: hidden;
+}
+
+.hero-foto {
+    display: block;
+    height: 549px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* hero end */
+
+
+
+/* management start */
+
+.managment-wrapper {
+    display: grid;
+    grid-gap: 100px;
+
+    grid-template-columns: 50% 50%;
+    height: 547px;
+    padding-bottom: 100px;
+}
+
+.managment-title-wrapper {
+    max-width: 672px;
+}
+
+.section-title {
+    font-size: 72px;
+    color: var(--color-black);
+    font-weight: 900;
+    /* padding-top: 100px; */
+    padding-bottom: 24px;
+    display: flex;
+}
+
+
+
+.managment-subtitle {
+    margin-bottom: 60px;
+}
+
+.managment-foto-wrapper {
+    overflow: hidden;
+}
+
+.managment-foto {
+    display: block;
+    height: 547px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* management end */
+
+/* work start */
+.work-wrapper {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 48% 52%;
+    grid-gap: 100px;
+    height: 661px;
+    width: 100%;
+    /* padding-bottom: 140px; */
+}
+
+.work-title-wrapper {
+    /* background-color: #4F9CF9; */
+    max-width: 670px;
+    align-self: center;
+    justify-self: end;
+}
+
+.work-subtitle {
+    margin-bottom: 60px;
+}
+
+.work-foto-wrapper {
+    overflow: hidden;
+}
+
+
+
+.work-foto {
+    height: 661px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* work end */
+
+/* customise start */
+
+
+/* customise end */
